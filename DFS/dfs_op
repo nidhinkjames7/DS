@@ -1,0 +1,7 @@
+[Nidhin@DBCPC12 DS]$ c++ dfs.cpp
+[Nidhin@DBCPC12 DS]$ ./a.out
+--------------------------DEPTH FIRST SEARCH--------------------------------
+
+1	2	3	4	7	5	6	8	[Nidhin@DBCPC12 DS]$ 
+
+

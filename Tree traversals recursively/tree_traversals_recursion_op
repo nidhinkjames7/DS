@@ -1,0 +1,24 @@
+[Nidhin@DBCPC12 DS]$ vi tree_traversals_recursion.cpp
+[Nidhin@DBCPC12 DS]$ c++ tree_traversals_recursion.cpp
+[Nidhin@DBCPC12 DS]$ ./a.out
+_______Recursive traversal of BinaryTree______
+Enter the number of items to be inserted:10
+Enter data:4
+Enter data:23
+Enter data:1
+Enter data:19
+Enter data:47
+Enter data:53
+Enter data:65
+Enter data:6
+Enter data:9
+Enter data:94
+Inorder Traversal:	1	4	6	9	19	23	47	53	65	94
+Preorder Traversal:	4	1	23	19	6	9	47	53	65	94
+Postorder Traversal:	1	9	6	19	94	65	53	47	23	4
+[Nidhin@DBCPC12 DS]$ 
+
+
+
+
+

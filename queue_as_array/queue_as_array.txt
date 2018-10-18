@@ -1,0 +1,158 @@
+[Nidhin@DBCPC12 C++]$ c++ queue_as_array.cpp
+[Nidhin@DBCPC12 C++]$ ./a.out
+-----QUEUE AS AN ARRAY----
+1.add elements
+2.delete elements
+3.display
+4.exit
+enter your choice
+1
+enter the elements
+10
+item pushed
+10
+do you want to continue(y/n)???
+1
+-----QUEUE AS AN ARRAY----
+1.add elements
+2.delete elements
+3.display
+4.exit
+enter your choice
+1
+enter the elements
+20
+item pushed
+20
+do you want to continue(y/n)???
+1
+-----QUEUE AS AN ARRAY----
+1.add elements
+2.delete elements
+3.display
+4.exit
+enter your choice
+1
+enter the elements
+30
+item pushed
+30
+do you want to continue(y/n)???
+1
+-----QUEUE AS AN ARRAY----
+1.add elements
+2.delete elements
+3.display
+4.exit
+enter your choice
+1
+enter the elements
+40
+item pushed
+40
+do you want to continue(y/n)???
+1
+-----QUEUE AS AN ARRAY----
+1.add elements
+2.delete elements
+3.display
+4.exit
+enter your choice
+3
+10
+20
+30
+40
+
+do you want to continue(y/n)???
+1
+-----QUEUE AS AN ARRAY----
+1.add elements
+2.delete elements
+3.display
+4.exit
+enter your choice
+2
+iterm is popped:
+10
+do you want to continue(y/n)???
+1
+-----QUEUE AS AN ARRAY----
+1.add elements
+2.delete elements
+3.display
+4.exit
+enter your choice
+3
+20
+30
+40
+
+do you want to continue(y/n)???
+1
+-----QUEUE AS AN ARRAY----
+1.add elements
+2.delete elements
+3.display
+4.exit
+enter your choice
+2
+iterm is popped:
+20
+do you want to continue(y/n)???
+1
+-----QUEUE AS AN ARRAY----
+1.add elements
+2.delete elements
+3.display
+4.exit
+enter your choice
+3
+30
+40
+
+do you want to continue(y/n)???
+1
+-----QUEUE AS AN ARRAY----
+1.add elements
+2.delete elements
+3.display
+4.exit
+enter your choice
+2
+iterm is popped:
+30
+do you want to continue(y/n)???
+1
+-----QUEUE AS AN ARRAY----
+1.add elements
+2.delete elements
+3.display
+4.exit
+enter your choice
+3
+40
+
+do you want to continue(y/n)???
+1
+-----QUEUE AS AN ARRAY----
+1.add elements
+2.delete elements
+3.display
+4.exit
+enter your choice
+2
+iterm is popped:
+40
+do you want to continue(y/n)???
+1
+-----QUEUE AS AN ARRAY----
+1.add elements
+2.delete elements
+3.display
+4.exit
+enter your choice
+3
+queue is empty
+
+

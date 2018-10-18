@@ -1,0 +1,9 @@
+[Nidhin@DBCPC12 DS]$ vi infix_to_postfix.cpp
+[Nidhin@DBCPC12 DS]$ c++ infix_to_postfix.cpp
+infix_to_postfix.cpp: In constructor ‘infix::infix()’:
+infix_to_postfix.cpp:27: warning: deprecated conversion from string constant to ‘char*’
+[Nidhin@DBCPC12 DS]$ ./a.out
+Enter an infix expression:a+b
+The postfix Expression is:ab+[Nidhin@DBCPC12 DS]$ 
+
+

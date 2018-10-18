@@ -1,0 +1,19 @@
+[Nidhin@DBCPC12 reverse_linked_list]$ c++ reverse_linked_list.cpp
+[Nidhin@DBCPC12 reverse_linked_list]$ ./a.out
+
+------REVERSE OF SINGLY LINKED LIST------
+enter how many elements to be added first 
+3
+enter the elements
+10
+20
+30
+number of elements are:
+3
+30 20 10 number of elements in the linked list:
+3elements in the linked list after reversing :
+
+10 20 30 [Nidhin@DBCPC12 reverse_linked_list]$ 
+
+
+

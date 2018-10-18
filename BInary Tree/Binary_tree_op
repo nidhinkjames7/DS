@@ -1,0 +1,8 @@
+[Nidhin@DBCPC12 DS]$ vi binary_tree.cpp
+[Nidhin@DBCPC12 DS]$ c++ binary_tree.cpp
+[Nidhin@DBCPC12 DS]$ ./a.out
+Creating binary tree
+Inorder traversal of binary tree
+D	B	H	E	A	F	C	G	[Nidhin@DBCPC12 [Nidhin@DBCPC12 DS]$ 
+
+

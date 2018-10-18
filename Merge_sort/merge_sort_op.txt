@@ -1,0 +1,57 @@
+[Nidhin@DBCPC12 DS]$ c++ merge_sort.cpp
+[Nidhin@DBCPC12 DS]$ ./a.out
+........................... MERGE SORT-----------------------------------
+
+
+ enter the limit for first array:2
+
+ enter number:4 1
+
+ enter number:
+ first array:
+
+ elements	4	1
+
+ enter the limit for second array:2
+
+ enter number:3 4
+
+ enter number:
+ second array:
+
+ elements	3	4
+
+ array after sorting
+ elements	1	3	4	4
+[Nidhin@DBCPC12 DS]$ ./a.out
+........................... MERGE SORT-----------------------------------
+
+
+ enter the limit for first array:5
+
+ enter number:4 3 1 8 2
+
+ enter number:
+ enter number:
+ enter number:
+ enter number:
+ first array:
+
+ elements	4	3	1	8	2
+
+ enter the limit for second array:5
+
+ enter number:10 20 6 4 1
+
+ enter number:
+ enter number:
+ enter number:
+ enter number:
+ second array:
+
+ elements	10	20	6	4	1
+
+ array after sorting
+ elements	1	1	2	3	4	4	6	8	10	20
+[Nidhin@DBCPC12 DS]$ 
+

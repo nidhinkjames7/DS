@@ -1,0 +1,31 @@
+[Nidhin@DBCPC12 ascending_order_linked_list]$ c++ linked_list_ascending.cpp
+[Nidhin@DBCPC12 ascending_order_linked_list]$ ./a.out
+enter the size of the array
+5
+enter the elements of the array
+10
+20
+30
+40
+50
+elements in the linked list
+
+10 20 30 40 50 number of elements in the linked list:
+5[Nidhin@DBCPC12 ascending_order_linked_list]$ ./a.out
+enter the size of the array
+5
+enter the elements of the array
+50
+20
+13
+4 
+100
+elements in the linked list
+
+4 13 20 50 100 number of elements in the linked list:
+5[Nidhin@DBCPC12 ascending_order_linked_list]$ 
+
+
+
+
+

@@ -1,0 +1,40 @@
+[Nidhin@DBCPC12 DS]$ c++ bubble_sort.cpp
+[Nidhin@DBCPC12 DS]$ ./a.out
+
+ -------------------------BUBBLE SORT--------------------------------
+
+
+Enter the limit of an array3
+
+Enter the elemnts:10
+50
+20
+
+Bubble sort
+Array beore sorting:
+10	50	20	
+
+Array after sorting:
+10	20	50	
+[Nidhin@DBCPC12 DS]$ ./a.out
+
+ -------------------------BUBBLE SORT--------------------------------
+
+
+Enter the limit of an array5
+
+Enter the elemnts:120
+120
+3
+1
+5
+
+Bubble sort
+Array beore sorting:
+120	120	3	1	5	
+
+Array after sorting:
+1	3	5	120	120	
+[Nidhin@DBCPC12 DS]$ 
+
+

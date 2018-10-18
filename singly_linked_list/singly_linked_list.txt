@@ -1,0 +1,45 @@
+1. add at begining
+ 2.append
+ 3.add after
+ 4.delete
+ 5.exit
+enter your choice
+3
+number of elements to be inserted
+1
+enter the position
+3
+enter the elements
+100
+number of the elements are:
+6
+30 
+20 
+10 
+100 
+40 
+50 
+1. add at begining
+ 2.append
+ 3.add after
+ 4.delete
+ 5.exit
+enter your choice
+4
+enter the element to be deleted
+100
+
+30 
+20 
+10 
+40 
+50 
+1. add at begining
+ 2.append
+ 3.add after
+ 4.delete
+ 5.exit
+enter your choice
+5
+[Nidhin@DBCPC12 singly_linked_list]$ 
+

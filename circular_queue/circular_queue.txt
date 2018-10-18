@@ -1,0 +1,68 @@
+[Nidhin@DBCPC12 DS]$ c++ circular_queue.cpp
+[Nidhin@DBCPC12 DS]$ ./a.out
+-----CIRCULAR QUEUE OPEARTIONS----
+
+1.adding element
+2.deleting elements
+3.exit
+enter your choice
+1
+enter the number of elements
+5
+enlements are
+10
+20
+30
+40
+50
+elements in the circular queue
+
+10 20 30 40 50 0 0 0 0 0 
+1.adding element
+2.deleting elements
+3.exit
+enter your choice
+1
+enter the number of elements
+2
+enlements are
+60
+70
+elements in the circular queue
+
+10 20 30 40 50 60 70 0 0 0 
+1.adding element
+2.deleting elements
+3.exit
+enter your choice
+2
+how many elements to be deleted
+2
+item deleted
+elements in the circular queue after deletion
+
+0 0 30 40 50 60 70 0 0 0 
+1.adding element
+2.deleting elements
+3.exit
+enter your choice
+1
+enter the number of elements
+6
+enlements are
+101
+102
+103
+104
+105
+106
+queue is full
+elements in the circular queue
+
+104 105 30 40 50 60 70 101 102 103 
+1.adding element
+2.deleting elements
+3.exit
+enter your choice
+
+

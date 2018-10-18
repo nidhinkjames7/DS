@@ -1,0 +1,68 @@
+[Nidhin@DBCPC12 DS]$ c++ non_recursion_traversals.cpp
+[Nidhin@DBCPC12 DS]$ ./a.out
+
+1.INSERT
+2.DISPLAY
+3.INORDER TRAVERSAL
+4.PREORDER TRAVERSAL
+5.POSTORDER TRAVERSAL
+6.EXIT
+ENTER YOUR CHOICE:1
+Enter the number of elements to be inserted:10
+Enter the elements:4
+23
+1
+19
+47
+53
+65
+6
+9
+94
+
+Do you want to continue(1/0):1
+
+1.INSERT
+2.DISPLAY
+3.INORDER TRAVERSAL
+4.PREORDER TRAVERSAL
+5.POSTORDER TRAVERSAL
+6.EXIT
+ENTER YOUR CHOICE:2
+The elements are:1 4 6 9 19 23 47 53 65 94 
+Do you want to continue(1/0):1
+
+1.INSERT
+2.DISPLAY
+3.INORDER TRAVERSAL
+4.PREORDER TRAVERSAL
+5.POSTORDER TRAVERSAL
+6.EXIT
+ENTER YOUR CHOICE:3
+After inorder traversal
+1 4 6 9 19 23 47 53 65 94 
+Do you want to continue(1/0):1
+
+1.INSERT
+2.DISPLAY
+3.INORDER TRAVERSAL
+4.PREORDER TRAVERSAL
+5.POSTORDER TRAVERSAL
+6.EXIT
+ENTER YOUR CHOICE:4
+After preorder traversal
+4 1 23 19 6 9 47 53 65 94 
+Do you want to continue(1/0):1
+
+1.INSERT
+2.DISPLAY
+3.INORDER TRAVERSAL
+4.PREORDER TRAVERSAL
+5.POSTORDER TRAVERSAL
+6.EXIT
+ENTER YOUR CHOICE:5
+After postorder traversal
+1 9 6 19 94 65 53 47 23 4 
+Do you want to continue(1/0):6
+[Nidhin@DBCPC12 DS]$ 
+

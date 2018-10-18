@@ -1,0 +1,18 @@
+[Nidhin@DBCPC12 DS]$ c++ dijistra.cpp
+[Nidhin@DBCPC12 DS]$ ./a.out
+
+ DIJKSTRAS ALGORITHM
+-----------------------------------
+Adjancency matrix of cost of edges:
+7	5	9999	9999	
+7	9999	9999	2	
+9999	3	9999	9999	
+4	9999	1	9999	
+Adjacency matrix of lowest cost between the vertices:
+7	5	8	7	
+6	6	3	2	
+9	3	6	5	
+4	4	1	6	
+[Nidhin@DBCPC12 DS]$ 
+
+

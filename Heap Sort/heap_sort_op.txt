@@ -1,0 +1,26 @@
+[Nidhin@DBCPC12 DS]$ vi heap_sort.cpp
+[Nidhin@DBCPC12 DS]$ c++ heap_sort.cpp
+[Nidhin@DBCPC12 DS]$ ./a.out
+
+ HEAP SORT
+-----------------------------------
+
+Enter the size of array:3
+
+Elements are:10
+30
+20
+10
+20
+23
+04
+
+Heap sort
+Before sorting
+30	20	23	10	10	20	4	
+
+After sorting
+4	10	10	20	20	23	30	
+[Nidhin@DBCPC12 DS]$ 
+
+

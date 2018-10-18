@@ -1,0 +1,118 @@
+[Nidhin@DBCPC12 doubly_linked_list]$ c++ doubly_linked_list.cpp
+[Nidhin@DBCPC12 doubly_linked_list]$ ./a.out
+------DOUBLY LINKED LIST-----
+
+1.add at begining
+2.append
+3.addafter
+4.delete
+5.exit
+enter your choice
+1
+enter how many elements to be added first
+2
+enter the elements 
+10
+20
+no of elements are:
+2
+
+20 10 
+1.add at begining
+2.append
+3.addafter
+4.delete
+5.exit
+enter your choice
+2
+enter how many elements to be added last
+3
+enter the elements
+30
+40
+50
+no of elements are:
+5
+
+20 10 30 40 50 
+1.add at begining
+2.append
+3.addafter
+4.delete
+5.exit
+enter your choice
+3
+number of elements to be inserted 
+1
+enter the positon
+2
+enter the elements
+100
+number of elements are:
+6
+
+20 10 100 30 40 50 
+1.add at begining
+2.append
+3.addafter
+4.delete
+5.exit
+enter your choice
+4
+enter the elements to be deleted
+100
+element deleted
+
+
+20 10 30 40 50 
+1.add at begining
+2.append
+3.addafter
+4.delete
+5.exit
+enter your choice
+4
+enter the elements to be deleted
+100
+
+100not found
+
+
+20 10 30 40 50 
+1.add at begining
+2.append
+3.addafter
+4.delete
+5.exit
+enter your choice
+2
+enter how many elements to be added last
+2
+enter the elements
+50
+70
+no of elements are:
+7
+
+20 10 30 40 50 50 70 
+1.add at begining
+2.append
+3.addafter
+4.delete
+5.exit
+enter your choice
+4
+enter the elements to be deleted
+50
+element deleted
+
+
+20 10 30 40 50 70 
+1.add at begining
+2.append
+3.addafter
+4.delete
+5.exit
+enter your choice
+
+

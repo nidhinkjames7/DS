@@ -1,0 +1,17 @@
+[Nidhin@DBCPC12 DS]$ vi binary_search.cpp
+[Nidhin@DBCPC12 DS]$ c++ binary_search.cpp
+[Nidhin@DBCPC12 DS]$ ./a.out
+
+ ----------------------BINARY SEARCH-----------------------------------
+Enter size of the array3
+Enter elements10
+32
+5
+----------------Sorted array is.............
+5
+10
+32
+Enter element to search10
+Element	10	is found in position	2[Nidhin@DBCPC12 DS]$ 
+
+

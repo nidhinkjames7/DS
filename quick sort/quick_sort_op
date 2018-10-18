@@ -1,0 +1,51 @@
+[Nidhin@DBCPC12 DS]$ vi quick_sort.cpp
+[Nidhin@DBCPC12 DS]$ c++ quick_sort.cpp
+[Nidhin@DBCPC12 DS]$ ./a.out
+
+Enter the size of an Quick:3
+
+elements are:26
+2
+5
+
+Quick sort
+
+Quick before sort:
+26
+2
+5
+
+Quick after quick sorting:
+2
+5
+26
+[Nidhin@DBCPC12 DS]$ ./a.out
+
+Enter the size of an Quick:6
+
+elements are:23
+8
+39
+41
+5
+1
+
+Quick sort
+
+Quick before sort:
+23
+8
+39
+41
+5
+1
+
+Quick after quick sorting:
+1
+5
+8
+23
+39
+41
+[Nidhin@DBCPC12 DS]$ 
+

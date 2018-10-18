@@ -1,0 +1,38 @@
+[Nidhin@DBCPC12 DS]$ c++ postfix_evaluation.cpp
+[Nidhin@DBCPC12 DS]$ ./a.out
+------POSTFIX EVALUATION------
+
+enter postfix expression to be evaluated
+7 7 +
+Result is:
+14
+[Nidhin@DBCPC12 DS]$ ./a.out
+------POSTFIX EVALUATION------
+
+enter postfix expression to be evaluated
+7 3 -
+Result is:
+4
+[Nidhin@DBCPC12 DS]$ ./a.out
+------POSTFIX EVALUATION------
+
+enter postfix expression to be evaluated
+7 7 *
+Result is:
+49
+[Nidhin@DBCPC12 DS]$ ./a.out
+------POSTFIX EVALUATION------
+
+enter postfix expression to be evaluated
+9 3 /
+Result is:
+3
+[Nidhin@DBCPC12 DS]$ ./a.out
+------POSTFIX EVALUATION------
+
+enter postfix expression to be evaluated
+6 2 %
+Result is:
+0
+[Nidhin@DBCPC12 DS]$ 
+

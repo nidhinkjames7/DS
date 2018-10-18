@@ -1,0 +1,78 @@
+[Nidhin@DBCPC12 C++]$ c++ stack_as_linkedlist.cpp
+[Nidhin@DBCPC12 C+./a.out
+stack as an linked list
+1.add elements
+2.delete elements
+3.display
+4.exit
+enter your choice
+1
+enter elements:
+10
+
+ 10is inserted
+do you want to continue(1/0)???
+1
+stack as an linked list
+1.add elements
+2.delete elements
+3.display
+4.exit
+enter your choice
+1
+enter elements:
+20
+
+ 20is inserted
+do you want to continue(1/0)???
+1
+stack as an linked list
+1.add elements
+2.delete elements
+3.display
+4.exit
+enter your choice
+1 
+enter elements:
+30
+
+ 30is inserted
+do you want to continue(1/0)???
+1
+stack as an linked list
+1.add elements
+2.delete elements
+3.display
+4.exit
+enter your choice
+3
+the elements are:
+30
+20
+10
+do you want to continue(1/0)???
+1
+stack as an linked list
+1.add elements
+2.delete elements
+3.display
+4.exit
+enter your choice
+2
+item is deleted:
+30do you want to continue(1/0)???
+1
+stack as an linked list
+1.add elements
+2.delete elements
+3.display
+4.exit
+enter your choice
+3
+the elements are:
+20
+10
+do you want to continue(1/0)???
+0
+[Nidhin@DBCPC12 C++]$ 
+

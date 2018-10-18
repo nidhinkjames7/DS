@@ -1,0 +1,1499 @@
+Program to create binary search tree.
+
+
+#include<iostream>
+
+using namespace std;
+
+#define TRUE 1
+
+#define FALSE 0
+
+class btree1
+
+{
+
+private:
+
+struct btreenode
+
+{
+
+btreenode *leftchild;
+
+int data;
+
+btreenode *rightchild;
+
+}*root;
+
+
+
+public:
+
+btree1();
+
+void buildtree(int num);
+
+static void insert(btreenode **sr,int);
+
+static void search(btreenode **sr,int num,btreenode **par,btreenode **x,int *found);
+
+void remove(int num);
+
+static void inorder(btreenode *sr);
+
+void display();
+
+static void rem(btreenode **sr,int num);
+~btree1();
+
+static void del(btreenode *sr);
+
+};
+
+btree1::btree1()
+
+{
+
+root=NULL;
+
+}
+
+void btree1::buildtree(int num)
+
+{
+
+(&root,num);
+
+}
+
+void btree1::insert(btreenode **sr,int num)
+
+{
+
+if(*sr==NULL)
+
+{
+
+*sr=new btreenode;
+
+(*sr)->leftchild=NULL;
+
+(*sr)->data=num;
+
+(*sr)->rightchild=NULL;
+
+}
+else
+
+{
+
+if(num<(*sr)->data)
+
+insert(&((*sr)->leftchild),num);
+
+else
+
+insert(&((*sr)->rightchild),num);
+
+}
+
+}
+
+void btree1::remove(int num)
+
+{
+
+rem(&root,num);
+
+}
+
+void btree1::rem(btreenode **sr,int num)
+
+{
+
+int found;
+
+btreenode *parent,*x,*xsucc;
+
+if(*sr==NULL)
+
+{
+
+cout<<"\nTree is empty\n";
+
+return;
+}
+
+parent=x=NULL;
+
+search(sr,num,&parent,&x,&found);
+
+if(found==FALSE)
+
+{
+
+cout<<"\n Data to be deleted is not present\n";
+
+return;
+
+}
+
+if(x->leftchild!=NULL&&x->rightchild!=NULL)
+
+{
+
+parent=x;
+
+xsucc=x->rightchild;
+
+while(xsucc->leftchild!=NULL)
+
+{
+
+parent=xsucc;
+
+xsucc=xsucc->leftchild;
+
+}
+
+x->data=xsucc->data;
+
+x=xsucc;
+
+}
+if(x->leftchild==NULL&&x->rightchild==NULL)
+
+{
+
+if(parent->rightchild==x)
+
+parent->rightchild=NULL;
+
+else
+
+parent->leftchild=NULL;
+
+delete x;
+
+return;
+
+}
+
+if(x->leftchild==NULL&&x->rightchild!=NULL)
+
+{
+
+if(parent->leftchild==x)
+
+parent->leftchild=x->rightchild;
+
+else
+
+parent->rightchild=x->rightchild;
+
+delete x;
+
+return;
+
+}
+
+if(x->leftchild!=NULL&&x->rightchild==NULL)
+
+{
+if(parent->leftchild==x)
+
+parent->leftchild=x->leftchild;
+
+else
+
+parent->rightchild=x->leftchild;
+
+delete x;
+
+return;
+
+}
+
+}
+
+
+
+void btree1::search(btreenode**sr,int num,btreenode**par,btreenode**x,int *found)
+
+{
+
+btreenode *q;
+
+q=*sr;
+
+*found=FALSE;
+
+*par=NULL;
+
+while(q!=NULL)
+
+{
+
+if(q->data==num)
+
+{
+
+*found=TRUE;
+
+*x=q;
+
+return;
+
+}
+
+*par=q;
+
+if(q->data>num)
+
+q=q->leftchild;
+
+else
+
+q=q->rightchild;
+
+}
+
+}
+
+void btree1::display()
+
+{
+
+inorder(root);
+
+}
+void btree1::inorder(btreenode *sr)
+
+{
+
+if(sr!=NULL)
+
+{
+
+inorder(sr->leftchild);
+
+cout<<sr->data<<"\t";
+
+inorder(sr->rightchild);
+
+}
+
+}
+
+btree1::~btree1()
+
+{
+
+del(root);
+
+}
+void btree1::del(btreenode*sr)
+
+{
+
+if(sr!=NULL)
+
+{
+
+del(sr->leftchild);
+del(sr->rightchild);
+
+}
+
+delete sr;
+
+}
+
+Int main()
+
+{
+
+cout<<"\n BINARY SEARCH TREE\n-----------------------------------";
+cout<<"\n";
+
+
+btree1 bt;
+
+int req,i=0,num;
+
+int a[]={11,9,13,8,10,12,14,15,7};
+
+while(i<=8)
+
+{
+
+bt.buildtree(a[i]);
+i++;
+
+}
+
+cout<<"\nBinary tree before deletion:\n";
+
+bt.display();
+
+bt.remove(9);
+
+cout<<"\nBinary tree after deletion:\n";
+
+bt.display();
+
+bt.remove(14);
+
+cout<<"\nBinary tree before deletion:\n";
+
+bt.display();
+
+bt.remove(8);
+
+cout<<"\nBinary tree after deletion:\n";
+
+bt.display();
+
+bt.remove(13);
+
+cout<<"\nBinary tree after deletion:\n";
+
+bt.display();
+
+}
+
+
+
+
+
+Program to define heap sort.
+using namespace std;
+
+#include<iostream>
+
+const int MAX=10;
+
+class array
+
+{
+
+private:
+
+int arr[MAX];
+
+int count;
+
+public:
+
+array();
+
+void add(int num);
+
+void makeheap();
+
+void heapsort();
+
+void display();
+
+};
+
+array::array()
+
+{
+
+count=0;
+
+for(int i=0;i<MAX;i++)
+
+arr[MAX]=0;
+
+}
+
+void array::add(int num)
+
+{
+
+if(count<MAX)
+
+{
+
+arr[count]=num;
+
+count++;
+
+}
+
+else
+
+cout<<"\n Array is full"<<endl;
+
+}
+
+void array::makeheap()
+
+{
+
+for(int i=1;i<count;i++)
+
+{
+
+int val=arr[i];
+
+int s=i;
+
+int f=(s-1)/2;
+
+while(s>0&&arr[f]<val)
+
+{
+
+arr[s]=arr[f];
+
+s=f;
+
+f=(s-1)/2;
+
+}
+
+arr[s]=val;
+
+}
+
+}
+
+void array::heapsort()
+
+{
+
+for(int i=count-1;i>0;i--)
+
+{
+
+int ivalue=arr[i];
+
+arr[i]=arr[0];
+
+int f=0;
+
+int s;
+
+if(i==1)
+
+s=-1;
+
+else
+
+s=1;
+
+if(i>2&&arr[2]>arr[1])
+
+s=2;
+
+while(s>=0&&ivalue<arr[s])
+
+{
+
+arr[f]=arr[s];
+
+f=s;
+
+s=2*f+1;
+
+if(s+1<=i-1&&arr[s]<arr[s+1])
+
+s++;
+
+if(s>i-1)
+
+s=-1;
+
+}
+
+arr[f]=ivalue;
+
+}
+
+}
+
+void array::display()
+
+{
+
+for(int i=0;i<count;i++)
+
+cout<<arr[i]<<"\t";
+
+cout<<endl;
+
+}
+
+int main()
+
+{
+cout<<"\n HEAP SORT\n-----------------------------------";
+cout<<"\n";
+
+array a;
+int n,i=1;
+cout<<"\nEnter the size of array:";
+cin>>n;
+cout<<"\nElements are:";
+for(i=1;i<=n;i++)
+{
+cin>>n;
+a.add(n);
+}
+a.makeheap();
+cout<<"\nHeap sort";
+cout<<"\nBefore sorting\n";
+a.display();
+a.heapsort();
+cout<<"\nAfter sorting\n";
+a.display();
+}
+
+
+
+
+Program to define the dijkstras algorithm.
+	
+#include<iostream>
+
+using namespace std;
+
+const int INF=9999;
+
+int main()
+
+{
+cout<<"\n DIJKSTRAS ALGORITHM\n-----------------------------------";
+cout<<"\n";
+
+int arr[4][4];
+
+int cost[4][4]={7,5,0,0,7,0,0,2,0,3,0,0,4,0,1,0};
+
+int i,j,k,n=4;
+
+for(i=0;i<n;i++)
+
+{
+
+for(j=0;j<n;j++)
+
+{
+
+if(cost[i][j]==0)
+
+arr[i][j]=INF;
+
+else
+
+arr[i][j]=cost[i][j];
+
+}
+
+}
+
+cout<<"Adjancency matrix of cost of edges:\n";
+
+for(i=0;i<n;i++)
+
+{
+
+for(j=0;j<n;j++)
+
+cout<<arr[i][j]<<"\t";
+
+cout<<"\n";
+
+}
+
+for(k=0;k<n;k++)
+
+{
+
+for(i=0;i<n;i++)
+
+{
+
+for(j=0;j<n;j++)
+
+{
+
+if(arr[i][j]>arr[i][k]+arr[k][j])
+
+arr[i][j]=arr[i][k]+arr[k][j];
+
+}
+
+}
+
+}
+
+
+
+cout<<"Adjacency matrix of lowest cost between the vertices:\n";
+
+for(i=0;i<n;i++)
+
+{
+
+for(j=0;j<n;j++)
+
+{
+
+cout<<arr[i][j]<<"\t";
+
+}
+
+cout<<"\n";
+
+
+
+}
+
+}
+
+
+
+
+
+
+Program to define bubble sort.
+
+#include<iostream>
+
+using namespace std;
+
+const int MAX=10;
+
+class array
+
+{
+
+private:
+
+ arr[MAX];
+
+int count;
+
+public:
+
+array();
+	
+void add(int item);
+
+void sort();
+
+void display();
+
+};
+
+
+
+array::array()
+
+{
+
+count=0;
+
+for(int i=0;i<MAX;i++)
+
+arr[i]=0;
+
+}
+
+void array::add(int item)
+
+{
+
+if(count<MAX)
+
+{
+
+arr[count]=item;
+
+count++;
+
+}
+
+else
+
+cout<<"\n Array is full"<<endl;
+
+}
+
+void array::sort()
+
+{
+
+int temp;
+
+for(int i=0;i<=count-2;i++)
+
+{
+
+for(int j=0;j<=count-2;j++)
+
+{
+
+if(arr[j]>arr[j+1])
+
+{
+
+temp=arr[j];
+
+arr[j]=arr[j+1];
+
+arr[j+1]=temp;
+
+}
+
+}
+
+}
+
+}
+
+void array::display()
+
+{
+
+for(int i=0;i<count;i++)
+
+cout<<arr[i]<<"\t";
+
+cout<<endl;
+
+}
+
+
+
+int main()
+
+{
+cout<<"\n BUBBLE SORT	\n-----------------------------------";
+cout<<"\n";
+
+array a;
+
+int num ,n;
+cout<<"\nEnter the limit of an array";
+cin>>n;
+cout<<"\nEnter the elemnts:";
+for(int i=0;i<n;i++)
+{
+cin>>num;
+a.add(num);
+}
+cout<<"\nBubble sort";
+cout<<"\nArray beore sorting:"<<endl;
+a.display();
+a.sort();
+cout<<"\nArray after sorting:"<<endl;
+a.display();
+}
+
+
+
+
+Program to define binary search.
+
+
+using namespace std;
+
+#include<iostream>
+
+class binary
+
+{
+
+int arr[10],n;
+
+public :
+
+void read();
+
+void bsearch();
+
+void sort();
+
+};
+
+void binary::read()
+
+{
+
+int i;
+
+cout<<"Enter size of the array";
+
+cin>>n;
+
+cout<<"Enter elements";
+
+for(i=0;i<n;i++)
+
+{
+
+cin>>arr[i];
+
+}
+
+}
+
+void binary::sort()
+
+{
+
+int temp;
+
+for(int i=0;i<=n-2;i++)
+
+{
+
+for(int j=i+1;j<=n-1;j++)
+
+{
+
+if(arr[i]>arr[j])
+
+{
+
+temp=arr[i];
+
+arr[i]=arr[j];
+
+arr[j]=temp;
+
+}
+
+}
+
+}
+
+cout<<"Sorted array is.............";
+
+for(int i=0;i<n;i++)
+
+{
+
+cout<<"\n"<<arr[i];
+
+}
+}
+
+void binary:: bsearch()
+
+{
+int s,beg=0,mid,end=n-1,k=0;
+
+cout<<"\nEnter element to search";
+
+cin>>s;
+
+while(beg<=end)
+
+{
+
+mid=(beg+end)/2;
+
+if(s==arr[mid])
+
+{
+
+k=1;
+
+break;
+
+}
+
+if(arr[mid]<s)
+
+{
+	
+beg=mid+1;
+
+}
+
+else if(arr[mid]>s)
+
+{
+
+end=mid-1;
+
+}
+}
+
+if(k==1)
+
+cout<<"Element\t"<<s<<"\tis found in position\t"<<mid+1;
+
+else
+
+cout<<"Element not found"  ;
+
+}
+
+int main()
+
+{
+cout<<"\n BINARY SEARCH	\n-----------------------------------";
+cout<<"\n";
+
+binary b;
+
+
+b.read();
+
+b.sort();
+
+b.bsearch();
+
+}
+
+
+
+
+
+Program to define merge sort.
+
+
+#include<iostream>
+using namespace std;
+class array
+{
+private:
+int *arr;
+int size;
+int count;
+public:
+array();
+array(int sz);
+void add(int num);
+static void sort(int *a,int sz);
+void merge(array &a,array &b);
+void display();
+~array();
+};
+array::array()
+{
+count=size=0;
+arr=NULL;
+}
+array::array(int sz)
+{
+count=0;
+size=sz;
+arr=new int[sz];
+}
+
+void array::add(int num)
+{
+if(count<size)
+{
+arr[count]=num;
+count++;
+}
+else
+cout<<"\n array is full"<<endl;
+}
+void array::display()
+{
+cout<<"\n elements";
+for(int j=0;j<count;j++)
+cout<<"\t"<< arr[j];
+cout<<endl;
+}
+void array::merge(array &a,array &b)
+{
+sort(a.arr,a.size);
+sort(b.arr,b.size);
+
+size=a.count + b.count;
+arr=new int[size];
+
+int i,j,k;
+for(i=j=k=0;j< a.count||k< b.count;)
+{
+if(a.arr[j]<=b.arr[k])
+arr[i++]=a.arr[j++];
+else
+arr[i++]=b.arr[k++];
+count++;
+if(j==a.count||k==b.count)
+break;
+}
+
+for(;k<b.count;)
+{
+arr[i++]=b.arr[k++];
+count++;
+}
+}
+void array::sort(int *a,int sz)
+{
+int temp;
+for(int i=0;i<=sz-2;i++)
+{
+for(int j=i+1;j<=sz-1;j++)
+{
+if(a[i]>a[j])
+{
+=a[i];
+a[i]=a[j];
+a[j]=temp;
+}	
+}
+}
+}
+array::~array()
+{
+delete arr;
+}
+Int main()
+{
+cout<<"\n MERGE SORT	\n-----------------------------------";
+cout<<"\n";
+
+int i,n1,n2,num1,num2;
+
+cout<<"\n enter the limit for first array:";
+cin>>n1;
+array a(n1);
+for(i=0;i<n1;i++)
+{
+cout<<"\n enter number:";
+cin>>num1;
+a.add(num1);
+}
+cout<<"\n first array:"<<endl;
+a.display();
+cout<<"\n enter the limit for second array:";
+cin>>n2;
+array b(n2);
+for(i=0;i<n2;i++)
+{
+cout<<"\n enter number:";
+cin>>num2;
+b.add(num2);
+}
+cout<<"\n second array:"<<endl;
+b.display();
+array c;
+c.merge(a,b);
+cout<<"\n array after sorting";
+c.display();
+}
+
+
+
+
+
+Program to define quick sort.
+
+
+
+#include<iostream>
+
+using namespace std;
+
+const int MAX=10;
+
+class Quick
+
+{
+
+	private:
+
+		int arr[MAX];
+
+		int count;
+
+	public:
+
+		Quick();
+
+		void add(int item);
+
+		int getcount();
+
+		static int split(int *,int,int);
+
+		void quicksort(int lower,int upper);
+
+		void display();
+
+};
+
+Quick::Quick()
+
+{
+
+	count=0;
+
+	for(int i=0;i<MAX;i++)
+
+		arr[i]=0;
+
+}
+
+void Quick::add(int item)
+
+{
+
+if(count<MAX)
+
+{
+
+	arr[count]=item;
+
+	count++;
+
+}
+
+else
+
+cout<<"\nQuick is full\n";
+
+}
+
+int Quick::getcount()
+
+{
+
+	return count;
+
+}
+
+void Quick::quicksort(int lower,int upper)
+
+{
+
+	if(upper>lower)
+
+	{
+
+		int i=split(arr,lower,upper);
+
+		quicksort(lower,i-1);
+
+		quicksort(i+1,upper);
+
+	}
+
+}
+
+int Quick::split(int *a,int lower,int upper)
+
+{
+
+	int i,p,q,t;
+
+	p=lower+1;
+
+	q=upper;
+
+	i=a[lower];
+
+	while(q>=p)
+
+	{
+
+		while(a[p]<i)
+
+			p++;
+
+		while(a[q]>i)
+
+			q--;
+
+		if(q>p)
+
+		{
+
+			t=a[p];
+
+			a[p]=a[q];
+
+			a[q]=t;
+
+		}
+
+	}
+
+	t=a[lower];
+
+	a[lower]=a[q];
+
+	a[q]=t;
+
+	return q;
+
+}
+
+void Quick::display()
+
+{
+
+	for(int i=0;i<count;i++)
+
+	{
+
+		cout<<arr[i];
+
+	cout<<"\n";
+
+		
+
+	}
+
+}
+
+int main()
+
+{
+
+	Quick a;
+int s,n;
+cout<<"\nEnter the size of an Quick:";
+cin>>s;
+cout<<"\nelements are:";
+for(int i=1;i<=s;i++)
+{
+cin>>n;
+a.add(n);
+}
+
+	cout<<"\nQuick sort\n";
+
+	cout<<"\nQuick before sort:\n";
+
+	a.display();
+
+	int c=a.getcount();
+
+	a.quicksort(0,c-1);
+
+	cout<<"\nQuick after quick sorting:\n";
+
+	a.display();
+
+	}
+
+
+
+
+
+
+
+
+Program to define depth first search.
+
+
+using namespace std;
+
+#include<iostream>
+
+#define TRUE 1
+
+#define FALSE 0
+
+const int MAX=8;
+
+struct node
+
+{
+
+int data;
+
+node *next;
+
+};
+
+class graph
+
+{
+
+private:
+
+int visited[MAX];
+
+public:
+
+graph();
+
+void dfs(int v,node **p);
+
+node* getnode_write(int val);
+
+void del(node *n);
+
+};
+
+graph::graph()
+
+{
+
+for(int i=0;i<MAX;i++)
+
+visited[i]=FALSE;
+
+}
+
+void graph::dfs(int v,node **p)
+
+{
+
+node *t;
+
+visited[v-1]=TRUE;
+
+cout<<v<<"\t";
+
+t=*(p+v-1);
+
+while(t!=NULL)
+
+{
+
+if(visited[t->data-1]==FALSE)
+
+dfs(t->data,p);
+
+else
+
+t=t->next;
+
+}
+
+}
+
+node* graph::getnode_write(int val)
+
+{
+
+node *newnode=new node;
+
+newnode->data=val;
+
+return newnode;
+
+}
+
+void graph::del(node *n)
+
+{
+
+node *temp;
+
+while(n!=NULL)
+
+{
+
+temp=n->next;
+
+delete n;
+
+n=temp;
+
+}
+
+}
+
+int main()
+
+{ 
+cout<<"\nDEPTH FIRST SEARCH\n--------------------------------";
+
+
+node *arr[MAX];
+
+node *v1,*v2,*v3,*v4;
+
+graph g;
+
+v1=g.getnode_write(2);
+
+arr[0]=v1;
+
+v1->next=v2=g.getnode_write(8);
+
+v2->next=NULL;
+
+v1=g.getnode_write(1);
+
+arr[1]=v1;
+
+v1->next=v2=g.getnode_write(3);
+
+v2->next=v3=g.getnode_write(8);
+
+v3->next=NULL;
+
+v1=g.getnode_write(2);
+
+arr[2]=v1;
+
+v1->next=v2=g.getnode_write(4);
+
+v2->next=v3=g.getnode_write(8);
+
+v3->next=NULL;
+
+v1=g.getnode_write(3);
+
+arr[3]=v1;
+
+v1->next=v2=g.getnode_write(7);
+
+v2->next=NULL;
+
+v1=g.getnode_write(6);
+
+arr[4]=v1;
+
+v1->next=v2=g.getnode_write(7);
+
+v2->next=NULL;
+
+v1=g.getnode_write(5);
+
+arr[5]=v1;
+
+v2->next=NULL;
+
+v1=g.getnode_write(4);
+
+arr[6]=v1;
+
+v1->next=v2=g.getnode_write(5);
+
+v2->next=v3=g.getnode_write(8);
+
+v3->next=NULL;
+
+v1=g.getnode_write(1);
+
+arr[7]=v1;
+
+v1->next=v2=g.getnode_write(2);
+
+v2->next=v3=g.getnode_write(3);
+
+v3->next=v4=g.getnode_write(7);
+
+v4->next=NULL;
+
+cout<<endl;
+
+g.dfs(1,arr);
+
+for(int i=0;i<MAX;i++)
+
+g.del(arr[i]);
+
+}
